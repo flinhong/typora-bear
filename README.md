@@ -78,7 +78,7 @@ The compiled CSS files will be located in the `/dist` directory once complete.
 On MacOS, you can copy the new files to Typora theme folder with following command:
 
 ```shell
-cp -r ./dist/ursine/* "/Users/franklin/Library/Application Support/abnerworks.Typora/themes/"
+cp -r ./dist/ursine/* "~/Library/Application Support/abnerworks.Typora/themes/"
 ```
 
 Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes).
