@@ -11,7 +11,7 @@ $umbra: true !default;
 @import url('https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap');
 $paragraph-font: "'Avenir Next LT Pro', 'Lato', 'Noto Serif CJK SC', 'Noto Serif SC', sans-serif";
 $header-font: "'Adelle', 'Times New Roman', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
-$monospace-font: "'Cascadia Mono', 'Fira Mono', 'Cousine', 'Consolas', 'Noto Serif CJK SC', 'Noto Serif SC', monospace";
+$monospace-font: "'Cascadia Mono', 'Cousine', 'Consolas', 'Noto Serif CJK SC', 'Noto Serif SC', monospace";
 
 // Cyrillic font support
 $cyrillic-font: false !default;
@@ -265,22 +265,6 @@ $mermaid-task-crit-border: #8f1d22 !default;
     font-weight: bold;
     src: local('Adelle SemiBold Italic'), url('./ursine/Adelle-SemiBoldItalic.woff') format('woff');
   }
-}
-
-// Fira Mono provided by Carrois Apostrophe from Google Fonts
-// Downloaded from `https://fonts.google.com/specimen/Fira+Mono`
-@font-face {
-  font-family: 'Fira Mono';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Fira Mono Regular'), url('./ursine/FiraMono-Regular.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Fira Mono';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Fira Mono Bold'), url('./ursine/FiraMono-Bold.ttf') format('ttf');
 }
 
 // IMPORTS //
