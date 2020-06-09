@@ -1,24 +1,35 @@
 {
-  "name": "typora-theme-ursine",
-  "version": "2.0",
-  "description": "A Typora theme, inspired by Bear",
+  "name": "typora-bear",
+  "version": "2.0.1",
+  "description": "A Typora theme, inspired by Bear.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-zip": "^5.0.1",
+    "merge-stream": "^2.0.0",
+    "minimist": "^1.2.5",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aCluelessDanny/typora-theme-ursine.git"
+    "url": "git+https://github.com/flinhong/typora-bear.git"
   },
-  "author": "A clueless Danny",
+  "keywords": [
+    "typora",
+    "css",
+    "scss",
+    "markdown"
+  ],
+  "author": "Frank Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aCluelessDanny/typora-theme-ursine/issues"
+    "url": "https://github.com/flinhong/typora-bear/issues"
   },
-  "homepage": "https://github.com/aCluelessDanny/typora-theme-ursine#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-zip": "^4.2.0",
-    "merge-stream": "^1.0.1",
-    "minimist": ">=1.2.2",
-    "node-sass": "^4.12.0"
-  }
+  "homepage": "https://github.com/flinhong/typora-bear#readme"
 }

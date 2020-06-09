@@ -11,15 +11,21 @@ const buildStyles = () => {
   sass.compiler = require("node-sass");
 
   const regular = src(["*.scss", "!*-cyrillic.scss", "!*-alt.scss"])
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sass({
+      outputStyle: "expanded"
+    }).on("error", sass.logError))
     .pipe(dest("dist/ursine"));
 
   const cyrillic = src("*-cyrillic.scss")
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sass({
+      outputStyle: "expanded"
+    }).on("error", sass.logError))
     .pipe(dest("dist/ursine-cyrillic"));
 
   const alt = src("*-alt.scss")
-    .pipe(sass({ outputStyle: "expanded" })).on("error", sass.logError)
+    .pipe(sass({
+      outputStyle: "expanded"
+    })).on("error", sass.logError)
     .pipe(dest("dist/ursine-alt"));
 
   return merge(regular, cyrillic, alt);
@@ -78,23 +84,25 @@ const dev = () => {
 
   // Watch styles
   watch(
-    ["*.scss", "ursine/*.scss"],
-    { ignoreInitial: false },
+    ["*.scss", "ursine/*.scss"], {
+      ignoreInitial: false
+    },
     function styleWatcher() {
-      return themeLocation
-        ? buildStyles().pipe(dest(themeLocation))
-        : buildStyles();
+      return themeLocation ?
+        buildStyles().pipe(dest(themeLocation)) :
+        buildStyles();
     }
   );
 
   // Watch assets
   watch(
-    ["ursine/*.(ttf|woff|png)"],
-    { ignoreInitial: false },
+    ["ursine/*.(ttf|woff|png)"], {
+      ignoreInitial: false
+    },
     function assetWatcher() {
-      return themeLocation
-        ? includeAssets().pipe(dest(path.join(themeLocation, "ursine")))
-        : includeAssets();
+      return themeLocation ?
+        includeAssets().pipe(dest(path.join(themeLocation, "ursine"))) :
+        includeAssets();
     }
   );
 };

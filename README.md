@@ -1,12 +1,14 @@
 
-# Ursine
+# Typora Bear
 
-![Latest Release Version](https://img.shields.io/github/v/release/aCluelessDanny/typora-theme-ursine)
-![Latest Release Date](https://img.shields.io/github/release-date/aCluelessDanny/typora-theme-ursine)
-![Download Count](https://img.shields.io/github/downloads/aCluelessDanny/typora-theme-ursine/total)
-![License](https://img.shields.io/github/license/aCluelessDanny/typora-theme-ursine)
+![Latest Release Version](https://img.shields.io/github/v/release/flinhong/typora-bear)
+![Latest Release Date](https://img.shields.io/github/release-date/flinhong/typora-bear)
+![Download Count](https://img.shields.io/github/downloads/flinhong/typora-bear/total)
+![License](https://img.shields.io/github/license/flinhong/typora-bear)
 
 A theme for the wonderful [Typora](https://typora.io), inspired by [Bear](https://bear.app)'s colors and elegancy.
+
+Adapted from [aCluelessDanny/typora-theme-ursine](https://github.com/aCluelessDanny/typora-theme-ursine/).
 
 ![thumbnail](images/thumbnail.png)
 
@@ -18,7 +20,7 @@ Code fence themes are adapted from CodeMirror's *3024 Day* and *Dracula* themes 
 
 ## Installation
 
-Decompress the latest release from [here](https://github.com/aCluelessDanny/typora-theme-ursine/releases). In Typora's preferences windows, go to `General -> Themes` and click on `Open Theme Folder`. Drop all the decompressed files and folders in there, and enjoy!~
+Decompress the latest release from [here](https://github.com/flinhong/typora-bear/releases). In Typora's preferences windows, go to `General -> Themes` and click on `Open Theme Folder`. Drop all the decompressed files and folders in there, and enjoy!~
 
 #### Which one should I download?
 
@@ -31,16 +33,6 @@ There are 3 different "packs" that you can download. The only thing that differe
 | **`Ursine_Alt.zip`** | These fonts are _similar_ to the ones mentioned above, but they are compatible with more languages, including Greek, Viatnamese, & Cyrillic. Use this if you need that language support.
 
 *Note:* The alternative fonts in `Ursine_Alt` are [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) for headers and quotes, & [Open Sans](https://fonts.google.com/specimen/Open+Sans) for paragraph text.
-
-### Like the theme a lot?
-
-I slightly debated on this, and hey, I don't see why not. If you find this theme really useful and you're feeling super generous, *how 'bout donating a coffee?*
-
-Ever since publishing this theme, I've periodically refined it overtime through the issues on my free time (and I *maaay* have spent a bit too much time on this during some of my classes back then).
-
-So if you wanna show appreciation that way, just know that this college boy would appreciate that generosity greatly~
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/clueless)
 
 ## Preview
 
@@ -79,10 +71,14 @@ npm i
 gulp
 ```
 
+`gulp` might be globally installed on your machine.
+
 The compiled CSS files will be located in the `/dist` directory once complete.
 
+On MacOS, you can copy the new files to Typora theme folder with following command:
+
+```shell
+cp -r ./dist/ursine/* "/Users/franklin/Library/Application Support/abnerworks.Typora/themes/"
+```
+
 Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes).
-
-### Related
-
-- If you like Ursine, but need a `RTL` theme, check out [sadra's Middle East theme!](https://github.com/sadra/middle-east)
