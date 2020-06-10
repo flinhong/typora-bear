@@ -674,10 +674,13 @@ th {
   }
 
   // Footnotes
+  .md-def-footnote:first-of-type {
+    margin-top: 3rem;
+  }
+
   .md-def-footnote {
-    margin-top: 2rem;
     font-size: 1.1rem;
-    line-height: .25rem;
+    margin-bottom: 0;
   }
 
   .md-footnote {
