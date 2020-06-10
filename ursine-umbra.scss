@@ -575,7 +575,7 @@ th {
     border-bottom: 1px solid $md-char-color;
     padding-bottom: 1rem;
     opacity: .8;
-    font-size: .8rem;
+    font-size: .95rem;
   }
 
   // Table toolbar
@@ -674,6 +674,12 @@ th {
   }
 
   // Footnotes
+  .md-def-footnote {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: .25rem;
+  }
+
   .md-footnote {
     font-family: unquote($header-font);
     font-size: .8em;
