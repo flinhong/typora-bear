@@ -1,4 +1,3 @@
-
 // SCSS VARIABLES //
 
 // Umbra or Polar?
@@ -15,6 +14,7 @@ $monospace-font: "'Cascadia Mono', 'Cousine', 'Consolas', 'Noto Serif CJK SC', '
 
 // Cyrillic font support
 $cyrillic-font: false !default;
+
 @if $cyrillic-font {
   $paragraph-font: "'Avenir Next Cyr', 'Lato', 'Noto Serif CJK SC', 'Noto Serif SC', sans-serif";
   $header-font: "'Adelle Cyrillic', 'Times New Roman', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
@@ -22,6 +22,7 @@ $cyrillic-font: false !default;
 
 // Alternative font support (supports Cyrillic, Greek, Vietnamese, among others)
 $alt-font: false !default;
+
 @if $alt-font {
   $paragraph-font: "'Open Sans', 'Lato', 'Noto Serif CJK SC', 'Noto Serif SC', sans-serif";
   $header-font: "'Roboto Slab', 'Times New Roman', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
@@ -99,7 +100,9 @@ $mermaid-task-crit-border: #8f1d22 !default;
 
 // FONT-FACES //
 
-@if $cyrillic-font {         // Cyrillic font-faces
+@if $cyrillic-font {
+
+  // Cyrillic font-faces
   // Avenir Next Cyr provided by Adrian Frutiger and Akira Kobayashi.
   // Downloaded from `https://www.cufonfonts.com/font/avenir-next-cyr`
   @font-face {
@@ -159,7 +162,11 @@ $mermaid-task-crit-border: #8f1d22 !default;
     font-weight: bold;
     src: local("Adelle Cyrillic SemiBold Italic"), url("./ursine/AdelleCyrillic-SemiBoldItalic.woff") format("woff");
   }
-} @else if $alt-font {       // Alternative font
+}
+
+@else if $alt-font {
+
+  // Alternative font
   // Open Sans provided by Steve Matteson
   // Downloaded from `https://fonts.google.com/specimen/Open+Sans`
   @font-face {
@@ -205,7 +212,10 @@ $mermaid-task-crit-border: #8f1d22 !default;
     font-weight: bold;
     src: local("Roboto Slab Regular"), url("./ursine/RobotoSlab-Regular.ttf") format("ttf");
   }
-} @else {
+}
+
+@else {
+
   // Normal font-faces
   // Adelle provided by Veronika Burian and Jos Scaglione
   // Downloaded from `https://www.cufonfonts.com/font/adelle`
@@ -245,34 +255,34 @@ $mermaid-task-crit-border: #8f1d22 !default;
 // ROOT VARIABLES //
 
 :root {
-  --bg-color: #{$bg-color};                               // background color
-  --text-color: #{$text-color};                           // text color
-  --md-char-color: #{$md-char-color};                     // color of meta characters (i.e. `*` in markdown)
-  --meta-content-color: #{$meta-content-color};           // color of meta contents (i.e. image text or link address in markdown)
-  --table-border-color: #{$md-char-color};                // color of table cell borders
-  --select-text-bg-color: #{$selected-text-bg-color};     // background color for selected text
+  --bg-color: #{$bg-color}; // background color
+  --text-color: #{$text-color}; // text color
+  --md-char-color: #{$md-char-color}; // color of meta characters (i.e. `*` in markdown)
+  --meta-content-color: #{$meta-content-color}; // color of meta contents (i.e. image text or link address in markdown)
+  --table-border-color: #{$md-char-color}; // color of table cell borders
+  --select-text-bg-color: #{$selected-text-bg-color}; // background color for selected text
 
-  --primary-color: #{$primary-color};                        // primary color
-  --primary-btn-border-color: #{$primary-btn-border-color};  // primary color for button borders
-  --primary-btn-text-color: #{$text-color};                  // text color for buttons
+  --primary-color: #{$primary-color}; // primary color
+  --primary-btn-border-color: #{$primary-btn-border-color}; // primary color for button borders
+  --primary-btn-text-color: #{$text-color}; // text color for buttons
 
-  --window-border: 1px solid #{$active-file-bg-color};   // border color for window and sidebar
+  --window-border: 1px solid #{$active-file-bg-color}; // border color for window and sidebar
 
-  --active-file-bg-color: #{$active-file-bg-color};                 // background color for active file in sidebar
-  --active-file-text-color: inherit;                                // text color for selected file
-  --active-file-border-color: #{$meta-content-color};               // border color for selected file
-  --active-search-item-bg-color: #{$active-search-item-bg-color};   // background color for active search item
+  --active-file-bg-color: #{$active-file-bg-color}; // background color for active file in sidebar
+  --active-file-text-color: inherit; // text color for selected file
+  --active-file-border-color: #{$meta-content-color}; // border color for selected file
+  --active-search-item-bg-color: #{$active-search-item-bg-color}; // background color for active search item
 
-  --side-bar-bg-color: #{$sidebar-bg-color};             // sidebar background color
-  --item-hover-bg-color: #{$item-hover-bg-color};        // background color of control items when hovering
-  --item-hover-text-color: #{$item-hover-text-color};    // text color upon hovering over menu items
-  --search-select-text-color: #{$text-color};            // text color for selected searched text
-  --search-select-bg-color: #{$search-select-bg-color};  // background color for selected searched text
-  --rawblock-edit-panel-bd: #{$accent-color};            // background color for inline HTML 'edit panel' blocks
-  --monospace: #{$monospace-font};                       // monospace font for code
+  --side-bar-bg-color: #{$sidebar-bg-color}; // sidebar background color
+  --item-hover-bg-color: #{$item-hover-bg-color}; // background color of control items when hovering
+  --item-hover-text-color: #{$item-hover-text-color}; // text color upon hovering over menu items
+  --search-select-text-color: #{$text-color}; // text color for selected searched text
+  --search-select-bg-color: #{$search-select-bg-color}; // background color for selected searched text
+  --rawblock-edit-panel-bd: #{$accent-color}; // background color for inline HTML 'edit panel' blocks
+  --monospace: #{$monospace-font}; // monospace font for code
 
-  --node-fill: #{$mermaid-node-fill};           // Mermaid node fill color
-  --node-border: #{$mermaid-node-border};       // Mermaid node border
+  --node-fill: #{$mermaid-node-fill}; // Mermaid node fill color
+  --node-border: #{$mermaid-node-border}; // Mermaid node border
 }
 
 // STYLING //
@@ -282,17 +292,25 @@ html, body {
   font-family: unquote($paragraph-font);
 }
 
-body { font-size: 1.2em; }
+body {
+  font-size: 1.2em;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: unquote($header-font);
 }
 
-p { margin: .5rem 0; }
+p {
+  margin: .5rem 0;
+}
 
-a { color: $link-color; }
+a {
+  color: $link-color;
+}
 
-del { color: $md-char-color; }
+del {
+  color: $md-char-color;
+}
 
 mark {
   padding: 2px;
@@ -316,9 +334,7 @@ blockquote {
   }
 }
 
-code,
-.md-fences,
-tt {
+code, .md-fences, tt {
   font-family: unquote($monospace-font);
   font-size: 1rem;
 }
@@ -340,7 +356,9 @@ kbd {
   box-shadow: none;
 }
 
-hr { border-color: $md-char-color; }
+hr {
+  border-color: $md-char-color;
+}
 
 table {
   border: 1px solid $md-char-color;
@@ -351,9 +369,12 @@ table {
   }
 }
 
-thead { background: $table-head-color; }
+thead {
+  background: $table-head-color;
+}
 
-td, th {
+td,
+th {
   padding: .35rem .7rem;
   border: 1px solid $md-char-color;
 }
@@ -365,7 +386,7 @@ td, th {
   max-width: 900px;
   line-height: 1.6;
 
-  transform: none;    // Windows-specific fix
+  transform: none; // Windows-specific fix
 
   h1, h2, h3, h4, h5, h6, p, pre {
     width: auto;
@@ -373,7 +394,9 @@ td, th {
 
   // Disable default header symbol where applicable (h3-h6)
   h3, h4, h5, h6 {
-    &::before { display: none; }
+    &::before {
+      display: none;
+    }
   }
 
   // Headers
@@ -389,9 +412,24 @@ td, th {
     }
   }
 
+  *+h2,
+  *+h3,
+  *+h4,
+  *+h5,
+  *+h6 {
+    margin-top: 1.8rem;
+    margin-bottom: .5rem;
+  }
+
+  h2+h3,
+  h3+h4,
+  h4+h5,
+  h5+h6 {
+    margin-top: .7rem;
+  }
+
   h1 {
     font-size: 1.8rem;
-    margin: 1rem 0;
 
     &::after {
       content: 'H1';
@@ -401,7 +439,6 @@ td, th {
 
   h2 {
     font-size: 1.4rem;
-    margin: .7rem 0;
 
     &::after {
       content: 'H2';
@@ -411,7 +448,6 @@ td, th {
 
   h3 {
     font-size: 1.2rem;
-    margin: .5rem 0;
 
     &::after {
       content: 'H3';
@@ -421,7 +457,6 @@ td, th {
 
   h4 {
     font-size: 1.1rem;
-    margin: .2rem 0;
 
     &::after {
       content: 'H4';
@@ -429,9 +464,9 @@ td, th {
     }
   }
 
-  h5, h6 {
+  h5,
+  h6 {
     font-size: 1rem;
-    margin: 0;
   }
 
   h5::after {
@@ -443,20 +478,21 @@ td, th {
   }
 
   // Lists
-  ol, ul {
+  ol,
+  ul {
     padding-left: 2rem;
     margin: .5rem 0;
 
-    > li {
+    >li {
       color: $primary-color;
       font-weight: bold;
 
-      > * {
+      >* {
         color: $text-color;
         font-weight: normal;
       }
 
-      > *:not(ol):not(ul) {
+      >*:not(ol):not(ul) {
         padding-left: .25rem;
       }
     }
@@ -470,7 +506,7 @@ td, th {
   .md-task-list-item {
     $transition-duration: .3s;
 
-    > input {
+    >input {
       -webkit-appearance: initial;
       display: block;
       position: absolute;
@@ -514,19 +550,19 @@ td, th {
       }
     }
 
-    > p {
+    >p {
       transition: color $transition-duration, opacity $transition-duration;
     }
 
-    &.task-list-done > p {
+    &.task-list-done>p {
       color: $md-char-color;
       text-decoration: line-through;
 
-      > .md-emoji {
+      >.md-emoji {
         opacity: .5;
       }
 
-      > .md-link > a {
+      >.md-link>a {
         opacity: .6;
       }
     }
@@ -549,6 +585,7 @@ td, th {
 
   .md-grid-board {
     a {
+
       &.md-active,
       &:hover {
         background: $primary-color;
@@ -557,6 +594,7 @@ td, th {
     }
 
     tr[row='1'] a {
+
       &.md-active,
       &:hover {
         background: $primary-btn-border-color;
@@ -565,17 +603,18 @@ td, th {
     }
   }
 
-  .btn-group .btn + .btn {
+  .btn-group .btn+.btn {
     margin-left: 0;
   }
 
   .btn-default {
+
     &.active,
     &.focus,
     &:active,
     &:focus,
     &:hover,
-    .open > &.dropdown-toggle {
+    .open>&.dropdown-toggle {
       background: transparent;
       color: inherit;
     }
@@ -647,13 +686,15 @@ td, th {
   }
 
   .md-def-name {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       color: $meta-content-color;
     }
   }
 
   // Image meta text
-  .md-image > .md-meta {
+  .md-image>.md-meta {
     color: $meta-content-color;
   }
 
@@ -689,7 +730,7 @@ td, th {
     // Mermaid graphs diagrams
     &[mermaid-type="graph"] {
       path.path {
-        & ~ defs marker {
+        &~defs marker {
           fill: $text-color;
         }
       }
@@ -702,12 +743,15 @@ td, th {
 
     // Mermaid Gantt diagrams
     &[mermaid-type="gantt"] {
+
       // NOTE: Not the best, but I can't target with :nth-child(2n)
       @for $i from 1 to 20 {
         .section#{$i} {
-          @if $i % 2 == 0 {
+          @if $i % 2==0 {
             fill: $accent-color;
-          } @else {
+          }
+
+          @else {
             fill: transparent;
           }
         }
@@ -740,12 +784,14 @@ td, th {
       text {
         fill: $text-color;
 
-        &[class*="activeText"], &[class*="activeCritText"] {
+        &[class*="activeText"],
+        &[class*="activeCritText"] {
           fill: $text-color !important;
           font-weight: bold;
         }
 
-        &[class*="doneText"], &[class*="doneCritText"] {
+        &[class*="doneText"],
+        &[class*="doneCritText"] {
           fill: $md-char-color !important;
         }
       }
@@ -759,11 +805,14 @@ td, th {
 
 // Modals
 .modal-content {
-  .modal-header, .modal-footer {
+
+  .modal-header,
+  .modal-footer {
     border-color: $md-char-color;
   }
 
-  input, button.btn-default {
+  input,
+  button.btn-default {
     border-color: $md-char-color;
   }
 
@@ -808,12 +857,13 @@ td, th {
     &:not(.active):hover {
       background: $active-search-item-bg-color;
     }
+
     &.active:before {
-        content: '⟩';
-        position: absolute;
-        left: 8px;
-        font-weight: bold;
-        padding-bottom: 5px;
+      content: '⟩';
+      position: absolute;
+      left: 8px;
+      font-weight: bold;
+      padding-bottom: 5px;
     }
   }
 
@@ -846,7 +896,9 @@ td, th {
 }
 
 .code-tooltip.md-f-tooltip {
-  &, .md-arrow::after {
+
+  &,
+  .md-arrow::after {
     background: $footnote-tooltip-bg-color !important;
     color: $footnote-tooltip-text-color !important;
   }
@@ -859,11 +911,17 @@ td, th {
 // Focus mode
 .on-focus-mode {
   .md-end-block:not(.md-focus):not(.md-focus-container) {
-    &, *, ol, ul {
+
+    &,
+    *,
+    ol,
+    ul {
       color: $md-char-color !important;
     }
 
-    img, .md-footnote, .md-emoji {
+    img,
+    .md-footnote,
+    .md-emoji {
       opacity: .5;
     }
 
@@ -925,12 +983,12 @@ td, th {
   #outline-content {
     line-height: 1.4em;
 
-    .outline-h1 > .outline-item {
+    .outline-h1>.outline-item {
       font-family: unquote($header-font);
     }
 
     @for $i from 1 through 6 {
-      .outline-h#{$i} > .outline-item {
+      .outline-h#{$i}>.outline-item {
         padding-left: .75em * ($i - 1);
       }
     }
@@ -941,7 +999,7 @@ td, th {
   }
 
   .outline-title-wrapper,
-  .outline-item-wrapper.outline-h1 > .outline-item {
+  .outline-item-wrapper.outline-h1>.outline-item {
     font-family: unquote($header-font);
   }
 
@@ -954,21 +1012,23 @@ td, th {
   .file-tree-node {
     padding-left: .75em;
 
-    i, span {
+    i,
+    span {
       vertical-align: middle;
     }
 
-    .file-node-icon, .file-node-title {
+    .file-node-icon,
+    .file-node-title {
       margin-left: 2px;
     }
 
     .file-tree-node:not(.file-library-file-node) {
-      & > .file-node-content {
+      &>.file-node-content {
         font-style: italic;
       }
     }
 
-    &.file-node-root > .file-node-content {
+    &.file-node-root>.file-node-content {
       font-weight: bold;
       font-style: italic;
     }
@@ -985,7 +1045,9 @@ td, th {
   }
 
   // Remove blinking animation when updating filename
-  .blink-area { animation: none; }
+  .blink-area {
+    animation: none;
+  }
 
   // Footer
   #ty-sidebar-footer {
@@ -1005,18 +1067,19 @@ td, th {
         font-style: italic;
       }
 
-      .show + .menuitem-group-label.show {
+      .show+.menuitem-group-label.show {
         border-color: $files-menu-hover-color;
       }
 
-      li > a:hover {
+      li>a:hover {
         background: $files-menu-hover-color;
       }
 
       .ty-side-sort-btn {
         cursor: pointer;
 
-        &.active, &:hover {
+        &.active,
+        &:hover {
           color: $primary-color;
         }
 
@@ -1055,6 +1118,7 @@ td, th {
 }
 
 .ty-spell-check-panel-item {
+
   &.ty-active,
   &:hover {
     background: $dropdown-hover-bg-color !important;
@@ -1093,7 +1157,9 @@ footer.ty-footer {
 }
 
 #top-titlebar {
-  &, * {
+
+  &,
+  * {
     color: inherit;
   }
 }
@@ -1169,6 +1235,7 @@ footer.ty-footer {
 }
 
 .megamenu-menu-list li {
+
   &:not(.saved) a:not(.active):hover,
   a.active {
     background: $megamenu-sidebar-active-bg-color !important;
@@ -1203,6 +1270,7 @@ footer.ty-footer {
 
 // Windows preferences window
 .ty-preferences {
+
   // Window
   .window {
     background: $megamenu-bg-color;
@@ -1267,7 +1335,7 @@ footer.ty-footer {
 }
 
 // Empty file splashscreen
-#write > p {
+#write>p {
   &:first-child:empty {
     position: static;
   }
@@ -1297,8 +1365,9 @@ footer.ty-footer {
 // Print/Export to PDF/HTML
 @media print {
   #write {
-    ol > li,
-    ul > li {
+
+    ol>li,
+    ul>li {
       color: $text-color;
     }
   }
