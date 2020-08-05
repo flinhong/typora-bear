@@ -6,11 +6,11 @@ $umbra: true !default;
 // Font variables
 // add Chinese fonts 'Noto Serif CJK' (思源宋体),
 // if it's not installed on the system, it will load from Google Fonts & name it as 'Noto Serif SC',
-@import url('https://fonts.frankindev.com/css2?family=Crimson+Pro:ital@0;1&family=Noto+Sans+SC&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.frankindev.com/css2?family=Crimson+Pro:ital@0;1&family=Noto+Serif+SC&display=swap');
 
 $paragraph-font: "'Crimson Pro', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
 $header-font: "'Adelle', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
-$monospace-font: "'Ubuntu Mono', 'Cascadia Mono', 'Noto Serif CJK SC', 'Noto Serif SC', monospace";
+$monospace-font: "'JetBrainsMono Nerd Font', 'Noto Serif CJK SC', 'Noto Serif SC', monospace";
 
 // Cyrillic font support
 $cyrillic-font: false !default;
