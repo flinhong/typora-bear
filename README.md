@@ -68,10 +68,10 @@ If you wish to manually build the theme (and maybe add your own touches in the p
 
 ```bash
 npm i
-gulp
+npm run build
 ```
 
-`gulp` might be globally installed on your machine.
+~~`gulp` might be globally installed on your machine.~~
 
 The compiled CSS files will be located in the `/dist` directory once complete.
 
