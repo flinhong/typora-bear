@@ -34,9 +34,10 @@ const buildStyles = () => {
 const includeAssets = () => {
   const regular = src([
     "ursine/*.png",
-    "ursine/FiraMono-*.ttf",
     "ursine/Adelle-*.woff",
-    "ursine/AvenirNextLTPro-*.woff"
+    "ursine/CrimsonText-*.ttf",
+    "ursine/SourceHanSerifSC-*.otf",
+    "ursine/OperatorMono*.otf"
   ]).pipe(dest("dist/ursine/ursine"));
 
   const cyrillic = src([

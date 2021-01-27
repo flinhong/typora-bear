@@ -4,28 +4,86 @@
 $umbra: true !default;
 
 // Font variables
-// add Chinese fonts 'Noto Serif CJK' (思源宋体),
+// add Chinese fonts 'Noto Serif CJK' (or, 'Source Han Serif SC', 思源宋体)
 // if it's not installed on the system, it will load from Google Fonts & name it as 'Noto Serif SC',
-@import url('https://fonts.frankindev.com/css2?family=Crimson+Pro:ital@0;1&family=Noto+Serif+SC&display=swap');
+@import url('https://fonts.frankindev.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+SC:wght@400;500&family=Ubuntu+Mono:ital@0;1&display=swap'); // fall back fonts
 
-$paragraph-font: "'Crimson Pro', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
-$header-font: "'Adelle', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
-$monospace-font: "'Cascadia Mono', 'Noto Serif CJK SC', 'Noto Serif SC', monospace";
+// common local font-faces
+@font-face {
+  font-family: "Source Han Serif SC";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Han Serif SC"), url("./ursine/SourceHanSerifSC-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Source Han Serif SC";
+  font-style: normal;
+  font-weight: lighter;
+  src: local("Source Han Serif SC"), url("./ursine/SourceHanSerifSC-Light.otf") format("otf");
+}
+@font-face {
+  font-family: "Source Han Serif SC";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Source Han Serif SC"), url("./ursine/SourceHanSerifSC-Medium.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Crimson Text"), url("./ursine/CrimsonText-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Crimson Text"), url("./ursine/CrimsonText-Italic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Crimson Text"), url("./ursine/CrimsonText-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Crimson Text"), url("./ursine/CrimsonText-BoldItalic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "OperatorMonoLig Nerd Font";
+  font-style: normal;
+  font-weight: normal;
+  src: local("OperatorMonoLig Nerd Font"), url("./ursine/OperatorMonoLigBookNerdFontComplete.otf") format("otf");
+}
+@font-face {
+  font-family: "OperatorMonoLig Nerd Font";
+  font-style: italic;
+  font-weight: normal;
+  src: local("OperatorMonoLig Nerd Font"), url("./ursine/OperatorMonoLigBookItalicNerdFontComplete.otf") format("otf");
+}
+
+$paragraph-font: "'Crimson Text', 'Source Han Serif SC', 'Noto Serif SC', serif";
+$header-font: "'Adelle', 'Source Han Serif SC', 'Noto Serif SC', serif";
+$monospace-font: "'OperatorMonoLig Nerd Font', 'Ubuntu Mono', 'Cascadia Mono', 'Source Han Serif SC', 'Noto Serif SC', monospace";
 
 // Cyrillic font support
 $cyrillic-font: false !default;
 
 @if $cyrillic-font {
-  $paragraph-font: "'Avenir Next Cyr', 'Lato', 'Noto Serif CJK SC', 'Noto Serif SC', sans-serif";
-  $header-font: "'Adelle Cyrillic', 'Times New Roman', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
+  $paragraph-font: "'Avenir Next Cyr', 'Lato', 'Source Han Serif SC', 'Noto Serif SC', sans-serif";
+  $header-font: "'Adelle Cyrillic', 'Times New Roman', 'Source Han Serif SC', 'Noto Serif SC', serif";
 }
 
 // Alternative font support (supports Cyrillic, Greek, Vietnamese, among others)
 $alt-font: false !default;
 
 @if $alt-font {
-  $paragraph-font: "'Open Sans', 'Lato', 'Noto Serif CJK SC', 'Noto Serif SC', sans-serif";
-  $header-font: "'Roboto Slab', 'Times New Roman', 'Noto Serif CJK SC', 'Noto Serif SC', serif";
+  $paragraph-font: "'Open Sans', 'Lato', 'Source Han Serif SC', 'Noto Serif SC', sans-serif";
+  $header-font: "'Roboto Slab', 'Times New Roman', 'Source Han Serif SC', 'Noto Serif SC', serif";
 }
 
 // Important colors for writing (text, links, code, etc.)
